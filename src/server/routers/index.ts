@@ -7,3 +7,7 @@ export const indexRouter = Router();
 
 indexRouter.use(estatic(resolve(__dirname, '../../../dist/app')));
 indexRouter.use('/api', apiRouter);
+
+indexRouter.get('*', (req: Request, res: Response) => {
+    res.sendFile(resolve(__dirname, '../../../dist/app/index.html'));
+});
