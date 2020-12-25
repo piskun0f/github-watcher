@@ -1,5 +1,4 @@
-import { resolve } from 'path';
-import { Router, Request, Response, static as estatic } from 'express';
+import { Router, Request, Response } from 'express';
 
 export const apiRouter = Router();
 
