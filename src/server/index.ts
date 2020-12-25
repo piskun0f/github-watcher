@@ -1,9 +1,11 @@
-import { resolve } from 'path';
-import express, { Request, Response } from 'express';
+import express from 'express';
+
+import { indexRouter } from './routers';
+
 const app = express();
 const port = 3000;
 
-app.use(express.static(resolve(__dirname, '../../dist/app')));
+app.use('/', indexRouter);
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
