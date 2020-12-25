@@ -30,6 +30,9 @@ const fronendConfig = {
 
 const backendConfig = {
     target: "node",
+    node: {
+        __dirname: true
+    },
     entry: "./src/server/index.ts",
     output: {filename: "server.js"},
     resolve: {
